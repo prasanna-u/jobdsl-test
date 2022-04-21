@@ -1,4 +1,4 @@
-pipelineJob("devopssetup") {
+pipeline {
     agent any
     stages {
         stage('Trigger') {
