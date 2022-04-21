@@ -5,6 +5,7 @@ pipeline {
             steps {
                 script {
                 	jobDsl targets: 'devops.groovy'
+                    jobDsl targets: 'devops.groovy', removedJobAction: 'DELETE', removedViewAction: 'DELETE'
                 }
 
             }
