@@ -6,9 +6,7 @@ pipeline {
                 script {
                 	jobDsl targets: 'devops.groovy'
                 }
-                script {
-                    jobDsl removedJobAction: 'DELETE', removedViewAction: 'DELETE', targets: 'devopssetup.groovy' 
-                }
+
             }
         }
         //stage('Cleanup') {
