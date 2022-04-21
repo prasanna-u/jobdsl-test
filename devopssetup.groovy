@@ -1,4 +1,4 @@
-pipeline {
+pipelineJob {
     agent any
     stages {
         stage('Trigger') {
