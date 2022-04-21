@@ -1,13 +1,13 @@
 pipeline {
-    agent { label 'buildeng-automation' }
+    agent any
     stages {
         stage('Trigger') {
             steps {
                 script {
-                	jobDsl targets: 'jenkins/casc/jobs/devops.groovy'
+                	jobDsl targets: 'devops.groovy'
                 }
                 script {
-                    jobDsl removedJobAction: 'DELETE', removedViewAction: 'DELETE', targets: 'jenkins/casc/jobs/devopssetup.groovy' 
+                    jobDsl removedJobAction: 'DELETE', removedViewAction: 'DELETE', targets: 'devopssetup.groovy' 
                 }
             }
         }
